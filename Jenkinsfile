@@ -17,18 +17,19 @@ pipeline {
     stage('prepare artifacts') {
       steps {
         sh '''
+          cd users
           cp target/*.zip users.zip
           zip -r users.zip *
         '''
       }
     }
 
-    stage('upload artifacts') {
-      steps {
-        sh '''
-          curl -v -u admin:admin123 --upload-file users.zip http://localhost:8081/repositories/users/users.zip
-        '''
-      }
-    }
+//     stage('upload artifacts') {
+//       steps {
+//         sh '''
+//           curl -v -u admin:admin123 --upload-file users.zip http://localhost:8081/repositories/users/users.zip
+//         '''
+//       }
+//     }
   }
 }
