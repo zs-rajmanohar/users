@@ -17,7 +17,6 @@ pipeline {
     stage('prepare artifacts') {
       steps {
         sh '''
-          cd users
           cp target/*.zip users.zip
           zip -r users.zip *
         '''
