@@ -22,12 +22,12 @@ pipeline {
       }
     }
 
-//     stage('upload artifacts') {
-//       steps {
-//         sh '''
-//           curl -v -u admin:admin123 --upload-file users.zip http://localhost:8081/repositories/users/users.zip
-//         '''
-//       }
-//     }
+    stage('upload artifacts') {
+      steps {
+        sh '''
+          curl -v -u admin:admin123 --upload-file users.zip http://172.31.3.71:8081/repository/users/users.zip
+        '''
+      }
+    }
   }
 }
