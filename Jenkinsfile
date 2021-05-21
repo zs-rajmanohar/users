@@ -1,7 +1,7 @@
 @Library('todoapp') _
 
 todoapp (
-  COMPONENT           : 'users'
+  COMPONENT           : 'users',
   SKIP_NEXUS_UPLOAD   :  false
 )
 
