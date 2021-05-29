@@ -5,7 +5,7 @@ Description = Users Service
 [Service]
 Type=simple
 Environment=SERVER_PORT=8080
-ExecStart=/bin/java -jar users-api-0.0.1.jar
+ExecStart=/bin/java -jar target/users-api-0.0.1.jar
 Restart=on-failure
 
 [Install]
