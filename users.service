@@ -11,3 +11,4 @@ SyslogIdentifier=users
 
 [Install]
 WantedBy=multi-user.target
+
