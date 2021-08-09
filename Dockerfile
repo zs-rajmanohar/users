@@ -5,6 +5,7 @@ WORKDIR     /app
 RUN         mvn clean package
 WORKDIR     /app/target
 ENV         SERVER_PORT=8080
+ENV         Restart=on-failure
 CMD         ["java", "-jar", "users-api-0.0.1.jar"]
 
 
